@@ -1,6 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+    // Existe una modificacion en el proceso de la problematica el porcentaje 
+    de descuento del seguro sera ingresado por teclado. Considerar los valores
+    posibles a ingresar son: 1-15, Si la persona ingresa un valor fuera del 
+    rango el valor de porcentaje sera 10 
  */
 package paquete2;
 
@@ -11,7 +15,7 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Comercio {
+public class Comercio3 {
     
     public static void main(String[] args) {
         
@@ -30,7 +34,7 @@ public class Comercio {
         
         double porcentajeSeguro = 8;
         double adicionalSeguro;
-        
+        int descseguro = 0;
         double sueldoFinal; 
         
         System.out.println("Ingrese el nombre por favor");
@@ -43,12 +47,18 @@ public class Comercio {
         edad = entrada.nextInt();
 
         System.out.println("Ingrese el sueldo básico por favor");
-        sueldoBasico = entrada.nextDouble();        
+        sueldoBasico = entrada.nextDouble();   
+        
+        System.out.println("Ingrese el descuento del seguro");
+        descseguro = entrada.nextInt();
         
         System.out.println("Ingrese el número de productos vendidos "
                 + "por favor");
         numeroProductos = entrada.nextInt();
         
+        // calcular el descuento del seguro 
+        if (descseguro<=15){
+            
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
         // Condicionales anidados
@@ -69,7 +79,7 @@ public class Comercio {
         }
         
        
-        adicionalSeguro = (sueldoBasico * 8)/100;
+        adicionalSeguro = (sueldoBasico * descseguro)/100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
         System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
@@ -94,5 +104,5 @@ public class Comercio {
         
         
     }
-    
+    }
 }
