@@ -13,9 +13,9 @@ import java.util.Scanner;
  * @author reroes
  */
 public class EjemploCadenas02 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {  
         Scanner entrada = new Scanner(System.in);
-        // 
+        // String.format es para acumular o agregar datos tipo cadenas 
         entrada.useLocale(Locale.US);
         String cadenaFinal = "Datos Ingresados\n";
         
@@ -34,7 +34,7 @@ public class EjemploCadenas02 {
                 cadenaFinal,
                 provincia);
         
-        System.out.println("Ingrese la país");
+        System.out.println("Ingrese el país");
         String pais = entrada.nextLine(); // 
         
         cadenaFinal = String.format("%sPaís:%s\n",  
