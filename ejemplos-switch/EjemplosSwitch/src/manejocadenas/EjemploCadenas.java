@@ -11,6 +11,7 @@ package manejocadenas;
  */
 public class EjemploCadenas {
     public static void main(String[] args) {
+        // tolowerCase() imprime en mayusculas, mientras que toUpperCase() imprime en minusculas
         String ciudad = "loJa";
         ciudad = ciudad.toUpperCase();
         System.out.printf("%s\n", ciudad.toLowerCase());

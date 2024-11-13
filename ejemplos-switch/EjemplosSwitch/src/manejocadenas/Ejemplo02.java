@@ -18,6 +18,6 @@ public class Ejemplo02 {
         //      0123456
         char letra = pais.charAt(0);
         System.out.printf("%s\n", letra);
-        
+        // charAt pone en mayuscula una sola letra en un dice desde el 0 
     }
 }

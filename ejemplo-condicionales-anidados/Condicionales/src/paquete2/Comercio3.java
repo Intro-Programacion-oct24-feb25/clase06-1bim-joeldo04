@@ -56,9 +56,30 @@ public class Comercio3 {
                 + "por favor");
         numeroProductos = entrada.nextInt();
         
-        // calcular el descuento del seguro 
-        if (descseguro<=15){
-            
+        // calculamos el descuento del seguro 
+        // en la condicion correcta por que no se sale del rango establecido, (Esta condicional es la correcta)
+        
+        if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
+            porcentajeSeguro = porcentajeSeguro + 0;
+        } else {
+            porcentajeSeguro = 10;
+        }
+
+        // no esta correcto deberia indicar que el rango debe ser mayor o igual a 1 
+        if (porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+
+         // no debe ser menor a 1 ni mayor a 15 
+        if (porcentajeSeguro < 1 || porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+
+        // Si porcentaje es menor a 1 y menor a 15 no se cumple y su valor sera 10
+        if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+        // Todas las condicionales funcionan 
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
         // Condicionales anidados
@@ -105,4 +126,4 @@ public class Comercio3 {
         
     }
     }
-}
+
