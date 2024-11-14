@@ -77,6 +77,7 @@ public class Comercio {
                 + "Apellidos: %s\n"
                 + "Edad: %d\n"
                 + "Sueldo: $%.2f\n"
+                + "Bono: $%.2f\n" 
                 + "Número de productos vendidos: %d\n"
                 + "\tProductidad: %.2f\n"
                 + "\tBono: $%.2f\n"
@@ -86,6 +87,7 @@ public class Comercio {
                 apellido,
                 edad,
                 sueldoBasico,
+                bono,
                 numeroProductos,
                 productividad,
                 bono,
