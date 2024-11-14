@@ -1,15 +1,5 @@
 /*
-*   Generar un programa que permita ingresar el número de día de la semana;
-*   (1 - 7)
-*   Si el usuario ingresa el 1, debe presentar el mensaje: Día 1  es Lunes
-*   Si el usuario ingresa el 2, debe presentar el mensaje: Día 2  es Martes
-*   Si el usuario ingresa el 3, debe presentar el mensaje: Día 3  es Miércoles
-*   Si el usuario ingresa el 4, debe presentar el mensaje: Día 4  es Jueves
-*   Si el usuario ingresa el 5, debe presentar el mensaje: Día 5  es Viernes
-*   Si el usuario ingresa el 6, debe presentar el mensaje: Día 6  es Sábado
-*   Si el usuario ingresa el 7, debe presentar el mensaje: Día 7  es Domingo
-*   Si el usuario ingresa un número diferente de 1,2,3,4,5,6,7; debe presentar
-*   un mensaje: Opción incorrecta
+
 
  */
 package paquete01;
@@ -31,49 +21,75 @@ public class Ejemplo021 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        System.out.println("Ingrese el número de día de la semana");
-        int numeroDia = entrada.nextInt();
-
-        switch (numeroDia) {
+        int dianacido;
+        int mesnacido;
+        int yearnacido;
+                
+        System.out.println("Ingrese el dia de su nacimiento");
+        dianacido = entrada.nextInt();
+        System.out.println("Ingrese el mes de su nacimiento");
+        mesnacido = entrada.nextInt();
+        System.out.println("Ingrese el año de su nacimiento");
+        yearnacido = entrada.nextInt();
+        
+        String mesCadena = "";
+        
+        switch (mesnacido) {
             case 1:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Lunes");
+                mesCadena = "Enero";
                 break;
 
             case 2:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Martes");
+                mesCadena = "Febrero";
                 break;
 
             case 3:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Miércoles");
+                mesCadena = "Marzo";
                 break;
 
             case 4:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Jueves");
+                mesCadena = "Abril";
                 break;
 
             case 5:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Viernes");
+                mesCadena = "Mayo";
                 break;
 
             case 6:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Sábado");
+                mesCadena = "Junio";
                 break;
 
-            case 7:
-                System.out.printf("Día %d es %s\n", numeroDia, 
-                        "Domingo");
+           case 7:
+                mesCadena = "Julio";
                 break;
+
+            case 8:
+                mesCadena = "Agosto";
+                break;
+
+            case 9:
+                mesCadena = "Septiembre";
+                break;
+
+            case 10:
+                mesCadena = "Octubre";
+                break;
+                
+            case 11:
+                mesCadena = "Noviembre";
+                break;
+
+            case 12:
+                mesCadena = "Diciembre";
+                break;             
 
             default:
                 System.out.println("Opción incorrecta");
                 break;
         }
-
+        
+        System.out.printf("Usted ha nacido el %d de %s de %d",
+                dianacido, mesCadena, yearnacido);
+                
     }
 }
